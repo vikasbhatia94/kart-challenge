@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: kart-api
+    env: go
+    plan: free
+    buildCommand: go build -o app .
+    startCommand: ./app
+    envVars:
+      - key: PORT
+        value: 8080
